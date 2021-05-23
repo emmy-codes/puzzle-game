@@ -1,0 +1,48 @@
+{
+    "items": [
+        {
+            "name": "key",
+            "description": "Here is a key"
+        },
+        {
+            "name": "shovel",
+            "description": "Here is a shovel"
+        },
+        {
+            "name": "backpack",
+            "description": "Here is a backpack"
+        },
+        {
+            "name": "lantern",
+            "description": "Here is a lantern"
+        },
+        {
+            "name": "matches",
+            "description": "Here is a box of matches"
+        },
+        {
+            "name": "salt",
+            "description": "Here is a bag of salt"
+        },
+        {
+            "name": "dried herbs",
+            "description": "Here is a small bundle of dried herbs"
+        },
+        {
+            "name": "mortar & pestle",
+            "description": "Here is a mortar & pestle"
+        },
+        {
+            "name": "chalk",
+            "description": "Here is a piece of white chalk"
+        },
+        {
+            "name": "red candles",
+            "description": "Here are two red candles"
+        },
+        {
+            "name": "patch of even ground",
+            "description": "This looks like a great spot to place something"
+        }
+    ]
+}
