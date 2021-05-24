@@ -2,43 +2,74 @@
     "items": [
         {
             "name": "key",
-            "description": "Here is a key"
+            "description": "Here is a key. It must unlock something nearby.",
+            "pick-up": "You pick up the key and place it in your backpack.",
+            "use": "You place the key in the lock and turn it. A click confirms that the door is unlocked."
         },
         {
             "name": "shovel",
-            "description": "Here is a shovel"
+            "description": "A shovel rests against the wall. Perhaps this would come in handy?",
+            "pick-up": "You pick up the shovel and tie it to the side of your backpack.",
+            "use": "You start to dig into the dirt, and soon unearth two red candles."
         },
         {
             "name": "backpack",
-            "description": "Here is a backpack"
+            "description": "Here is a small, weathered backpack. This could be useful",
+            "pick-up": "You pick up the backpack and throw it over one shoulder."
         },
         {
             "name": "lantern",
-            "description": "Here is a lantern"
+            "description": "Here is a lantern",
+            "pick-up": "You pick up the lantern and place it in your backpack.",
+            "use": "You hang the lantern on a hook on the wall, which partially illuminates the room."
         },
         {
             "name": "matches",
-            "description": "Here is a box of matches"
+            "description": "Here is a box of matches",
+            "pick-up": "You pick up the matches and place it in your backpack.",
+            "use-lantern": "You strike a match against the box and a flame bursts into life. You then insert the flame into the lantern, causing it to bring forth a warm, golden glow.",
+            "use-candles": "You strike a match against the box and a flame bursts into life. You then light the candles one by one, watching the eerie red smoke trail up the stairs."
         },
         {
             "name": "salt",
-            "description": "Here is a bag of salt"
+            "description": "Here is a bag of salt",
+            "pick-up": "You pick up the bag of salt and place it in your backpack.",
+            "use": "You Step behind one of the shelves and draw a circle using the salt. You then step inside and crouch down, hoping to stay out of sight."
         },
         {
             "name": "dried herbs",
-            "description": "Here is a small bundle of dried herbs"
+            "description": "Here is a small bundle of dried herbs",
+            "pick-up": "You pick up the bundle of herbs and place it in your backpack.",
+            "use": "You place the herbs into the mortar & pestle."
         },
         {
             "name": "mortar & pestle",
-            "description": "Here is a mortar & pestle"
+            "description": "There is a mortar & pestle stood on the kitchen counter.",
+            "use": "You grind the herbs into a fine dust."
+        },
+        {
+            "name": "ground herbs",
+            "description": "The mortar and pestle contains the ground bundle of herbs.",
+            "pick-up": "You pour the powder into a piece of kitchen roll and place it in your backpack.",
+            "use": "You sprinkle the herbal powder onto the red candle flames. A bright green light flashes through the room, then they return to normal."
         },
         {
             "name": "chalk",
-            "description": "Here is a piece of white chalk"
+            "description": "Here is a piece of white chalk",
+            "pick-up": "You pick up the chalk and place it in your backpack.",
+            "use": "You take the salt and draw an intricate pattern on the floor. This looks sure to trap the demon in place."
         },
         {
             "name": "red candles",
-            "description": "Here are two red candles"
+            "description": "Here are two red candles",
+            "pick-up": "You dust the candles off and place them in your backpack.",
+            "use": "You place the candles one each side of the bottom of the stairs."
+        },
+        {
+            "name": "rug",
+            "description": "A small dusty rug is rolled up and tucked inside the crate.",
+            "pick-up": "You place the rug into your backpack.",
+            "use": "You unroll the rug and place it over the trap."
         },
         {
             "name": "patch of even ground",
