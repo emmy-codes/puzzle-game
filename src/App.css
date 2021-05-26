@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+.backpack {
+  background-color: red;
+  max-width: 20vw;
+  max-height: 20vh;
+}
+
+.key {
+  background-color: forestgreen;
+  max-width: 20vw;
+  max-height: 20vh;
+}
+
+.lantern {
+  background-color: black;
+  max-width: 20vw;
+  max-height: 20vh;
+}
+
+.shovel {
+  background-color: lightskyblue;
+  max-width: 20vw;
+  max-height: 20vh;
+}
+
+.rug {
+  background-color: pink;
+  max-width: 20vw;
+  max-height: 20vh;
+}

@@ -1,11 +1,10 @@
 import './App.css';
+import Garden from "././Components/Garden"
 
 function App() {
   return (
     <>
       <Garden />
-      <Kitchen />
-      <Cellar />
     </>
   );
 }
