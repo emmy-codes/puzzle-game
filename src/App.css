@@ -14,20 +14,29 @@
   max-height: 20vh;
 }
 
-.lantern {
+.lantern .floor {
   background-color: black;
   max-width: 20vw;
   max-height: 20vh;
 }
 
-.shovel {
+.shovel .dirt {
   background-color: lightskyblue;
   max-width: 20vw;
   max-height: 20vh;
 }
 
-.rug {
+.rug .salt {
   background-color: pink;
   max-width: 20vw;
   max-height: 20vh;
+}
+
+.inventory {
+  border: dashed;
+  text-align: center;
+  font-family: cursive;
+  position: absolute;
+  right: 0;
+  background-color: burlywood;
 }

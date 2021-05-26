@@ -1,14 +1,31 @@
 import React from "react"
 
-function Cellar(){
-    return(
-        <>
-            {/* can't see without lighting lantern with matches */}
-            <div>space on the floor to draw trap (with chalk)</div>
-            <div>patch of dirt (to dig up candles with shovel)</div>
-            <div>salt draws a circle on the floor for you to stand in</div>
-        </>
-    )
+function Cellar(props) {
+    const onClickHandler = ()=> {
+       console.log("stuff")
+    }
+    return (
+      <>
+        {/* can't see without lighting lantern with matches */}
+        <div className="floor" onClick={onClickHandler}>
+          space on the floor to draw trap (with chalk)
+        </div>
+        <div className="dirt" onClick={onClickHandler}>
+          patch of dirt (to dig up candles with shovel)
+        </div>
+        <div className="salt" onClick={onClickHandler}>
+          salt draws a circle on the floor for you to stand in
+        </div>
+        <div>
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+      </>
+    );
 }
 
 export default Cellar
