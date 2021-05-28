@@ -1,5 +1,21 @@
+ul li {
+  list-style: none;
+  margin: 0;
+}
+
+ul {
+  padding: 0
+}
+
 .App {
   text-align: center;
+}
+
+.garden {
+  width: 100vw;
+  height: 100vh;
+  background: url("./Images/gardenplaceholder.jpg") no-repeat;
+  background-size: contain;
 }
 
 .backpack {
@@ -14,19 +30,19 @@
   max-height: 20vh;
 }
 
-.lantern .floor {
-  background-color: black;
+.lantern, .floor {
+  background-color: rgb(146, 45, 20);
   max-width: 20vw;
   max-height: 20vh;
 }
 
-.shovel .dirt {
+.shovel, .dirt {
   background-color: lightskyblue;
   max-width: 20vw;
   max-height: 20vh;
 }
 
-.rug .salt {
+.rug, .salt {
   background-color: pink;
   max-width: 20vw;
   max-height: 20vh;
@@ -38,5 +54,6 @@
   font-family: cursive;
   position: absolute;
   right: 0;
+  padding: 10px;
   background-color: burlywood;
 }

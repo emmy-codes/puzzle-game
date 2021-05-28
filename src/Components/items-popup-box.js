@@ -9,7 +9,7 @@ function ItemsPopupBox(props) {
         <div>
           <img width="200" src={`/${props.object.name}.jpg`} />
           <div>{props.object.description}</div>
-          <button>Take {props.object.name}</button>
+          <button onClick={props.onPickUp}>Take {props.object.name}</button>
           <button onClick={props.onClose}>Close</button>
         </div>
       </>

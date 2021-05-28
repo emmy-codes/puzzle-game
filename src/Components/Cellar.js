@@ -16,14 +16,7 @@ function Cellar(props) {
         <div className="salt" onClick={onClickHandler}>
           salt draws a circle on the floor for you to stand in
         </div>
-        <div>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
-        </div>
+        
       </>
     );
 }
