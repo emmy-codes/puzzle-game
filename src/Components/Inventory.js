@@ -10,7 +10,7 @@ function setInventory(props) {
             {props.collectedItems.map((inventoryItem) => {
                 return (
                   <li>
-                    <img width="40" src={`/${inventoryItem.name}.jpg`} />
+                    <div className={`inventory-image ${inventoryItem.name}`} />
                     {inventoryItem.name}
                   </li>
                 );

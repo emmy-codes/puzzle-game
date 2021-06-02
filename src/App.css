@@ -1,6 +1,7 @@
 ul li {
   list-style: none;
   margin: 0;
+  text-align: left;
 }
 
 ul {
@@ -56,4 +57,39 @@ ul {
   right: 0;
   padding: 10px;
   background-color: burlywood;
+}
+
+.popup-image {
+  width: 100px;
+  height: 100px;
+  display: block;
+  background-size: contain;
+}
+
+.inventory-image {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: contain;
+  margin-right: 15px;
+}
+
+.popup-image.backpack, .inventory-image.backpack {
+  background-image: url("./Images/backpack.jpg");
+}
+
+.popup-image.key, .inventory-image.key {
+  background-image: url("./Images/key.jpg");
+}
+
+.popup-image.lantern, .inventory-image.lantern {
+  background-image: url("./Images/lantern.jpg");
+}
+
+.popup-image.rug, .inventory-image.rug {
+  background-image: url("./Images/rug.jpg");
+}
+
+.popup-image.shovel, .inventory-image.shovel {
+  background-image: url("./Images/shovel.jpg");
 }

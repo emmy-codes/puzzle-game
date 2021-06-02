@@ -5,19 +5,31 @@ import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
 
 function Garden(props) {
-  const gardenItemsName = ["backpack", "key", "lantern", "shovel", "rug"];
+  const availableItems = ["backpack", "key", "lantern", "shovel", "rug"];
 
   /* useState = [stateObject, functionToUpdateStateObject] */
   const [currentItem, setCurrentItem] = React.useState();
   const [inventoryItems, setInventoryItems] = React.useState([]);
-  const [gardenItems, setGardenItems] = React.useState(
-    data.items.reduce((array, item) => {
-      if (gardenItemsName.includes(item.name)) {
-        array.push(item);
-      }
-      return array;
-    }, [])
-  );
+  // const [gardenItems, setGardenItems] = React.useState(
+  //   availableItems.reduce((array, item) => {
+  //     const foundObject = data.items.find((dataItem) => {
+  //       return dataItem.name === item
+  //     });
+  //     array.push(foundObject)
+  //     return array
+  //   }, [])
+  // );
+
+  const collectorArray = [];
+
+  for (const showItem of availableItems) {
+    const foundObject = data.items.find((item) => {
+      return item.name === showItem;
+    });
+    collectorArray.push(foundObject);
+  }
+  const [gardenItems, setGardenItems] = React.useState(collectorArray);
+
   /* clickHandlerCreator is a function that takes targetItem and stores for 
   the click handler (the return) to use */
   const clickHandlerCreator = (targetItem) => {
@@ -45,7 +57,7 @@ function Garden(props) {
               return initialArray;
             },
             []
-          );
+          ); 
           setGardenItems(newGardenItems);
           setCurrentItem(undefined);
         }}
