@@ -5,7 +5,7 @@ ul li {
 }
 
 ul {
-  padding: 0
+  padding: 0;
 }
 
 .App {
@@ -16,45 +16,140 @@ ul {
   width: 100vw;
   height: 100vh;
   background: url("./Images/gardenplaceholder.jpg") no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
+  background-position: center;
 }
 
-.backpack {
+.kitchen {
+  width: 100vw;
+  height: 100vh;
+  background: url("./Images/kitchenplaceholder.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.cellar {
+  width: 100vw;
+  height: 100vh;
+  background: url("./Images/cellarplaceholder.jpeg") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.garden > .backpack {
   background-color: red;
   max-width: 20vw;
   max-height: 20vh;
+  position: absolute;
+  top: 50%;
+  left: 20%;
 }
 
-.key {
+.garden > .key {
   background-color: forestgreen;
   max-width: 20vw;
   max-height: 20vh;
+  position: absolute;
+  top: 67%;
+  right: 30%;
 }
 
-.lantern, .floor {
+.garden > .lantern {
   background-color: rgb(146, 45, 20);
   max-width: 20vw;
   max-height: 20vh;
+  position: absolute;
+  top: 20%;
+  right: 29%;
 }
 
-.shovel, .dirt {
+.garden > .shovel {
   background-color: lightskyblue;
   max-width: 20vw;
   max-height: 20vh;
+  position: absolute;
+  top: 65%;
+  left: 40%;
 }
 
-.rug, .salt {
+.garden > .rug {
   background-color: pink;
   max-width: 20vw;
   max-height: 20vh;
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+}
+
+.kitchen > .matches {
+  background-color: pink;
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  bottom: 27%;
+  left: 61%;
+}
+
+.kitchen > .salt {
+  background-color: rgb(146, 45, 20);
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  top: 35%;
+  left: 37%;
+}
+
+.kitchen > .dried-herbs {
+  background-color: forestgreen;
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  top: 48%;
+  right: 8%;
+}
+
+.kitchen > .mortar-pestle {
+  background-color: lightskyblue;
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  top: 54%;
+  left: 49%;
+}
+
+.cellar > .patch-of-even-ground {
+  background-color: forestgreen;
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  bottom: 20%;
+  right: 34%;
+}
+
+.cellar > .chalk {
+  background-color: pink;
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  bottom: 50%;
+  left: 51%;
+}
+
+.cellar > .red-candles {
+  background-color: red;
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  top: 40%;
+  left: 62%;
 }
 
 .inventory {
   border: dashed;
   text-align: center;
-  font-family: cursive;
   position: absolute;
-  right: 0;
+  right: 20px;
+  top: 20px;
   padding: 10px;
   background-color: burlywood;
 }
@@ -64,6 +159,8 @@ ul {
   height: 100px;
   display: block;
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .inventory-image {
@@ -72,24 +169,91 @@ ul {
   display: inline-block;
   background-size: contain;
   margin-right: 15px;
+  background-repeat: no-repeat;
 }
 
-.popup-image.backpack, .inventory-image.backpack {
+.popup-image.backpack,
+.inventory-image.backpack {
   background-image: url("./Images/backpack.jpg");
 }
 
-.popup-image.key, .inventory-image.key {
+.popup-image.key,
+.inventory-image.key {
   background-image: url("./Images/key.jpg");
 }
 
-.popup-image.lantern, .inventory-image.lantern {
+.popup-image.lantern,
+.inventory-image.lantern {
   background-image: url("./Images/lantern.jpg");
 }
 
-.popup-image.rug, .inventory-image.rug {
+.popup-image.rug,
+.inventory-image.rug {
   background-image: url("./Images/rug.jpg");
 }
 
-.popup-image.shovel, .inventory-image.shovel {
+.popup-image.shovel,
+.inventory-image.shovel {
   background-image: url("./Images/shovel.jpg");
+}
+
+.popup-image.matches,
+.inventory-image.matches {
+  background-image: url("./Images/matches.png");
+}
+
+.popup-image.salt,
+.inventory-image.salt {
+  background-image: url("./Images/salt.png");
+}
+
+.popup-image.dried-herbs,
+.inventory-image.dried-herbs {
+  background-image: url("./Images/dried herbs.png");
+}
+
+.popup-image.mortar-pestle,
+.inventory-image.mortar-pestle {
+  background-image: url("./Images/mortar & pestle.png");
+}
+
+.popup-image.red-candles,
+.inventory-image.red-candles {
+  background-image: url("./Images/red-candles.png");
+}
+
+.popup-image.chalk,
+.inventory-image.chalk {
+  background-image: url("./Images/chalk.png");
+}
+
+.popup-image.mortar-pestle,
+.inventory-image.mortar-pestle {
+  background-image: url("./Images/mortar & pestle.png");
+}
+
+.centered-popup {
+  position: relative;
+  top: 30%;
+  left: 30%;
+  background-color: aliceblue;
+  border: 2px solid black;
+  width: 40vw;
+  height: 20vw;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.door {
+  height: 287px;
+  width: 222px;
+  position: absolute;
+  top: 22vw;
+  right: 20.7vw;
+  cursor: pointer;
 }

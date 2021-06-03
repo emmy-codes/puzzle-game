@@ -37,13 +37,13 @@
             "use": "You Step behind one of the shelves and draw a circle using the salt. You then step inside and crouch down, hoping to stay out of sight."
         },
         {
-            "name": "dried herbs",
+            "name": "dried-herbs",
             "description": "Here is a small bundle of dried herbs",
             "pick-up": "You pick up the bundle of herbs and place it in your backpack.",
             "use": "You place the herbs into the mortar & pestle."
         },
         {
-            "name": "mortar & pestle",
+            "name": "mortar-pestle",
             "description": "There is a mortar & pestle stood on the kitchen counter.",
             "use": "You grind the herbs into a fine dust."
         },
@@ -60,7 +60,7 @@
             "use": "You take the salt and draw an intricate pattern on the floor. This looks sure to trap the demon in place."
         },
         {
-            "name": "red candles",
+            "name": "red-candles",
             "description": "Here are two red candles",
             "pick-up": "You dust the candles off and place them in your backpack.",
             "use": "You place the candles one each side of the bottom of the stairs."
@@ -72,7 +72,7 @@
             "use": "You unroll the rug and place it over the trap."
         },
         {
-            "name": "patch of even ground",
+            "name": "patch-of-even-ground",
             "description": "This looks like a great spot to place something"
         }
     ]

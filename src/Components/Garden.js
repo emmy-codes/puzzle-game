@@ -4,7 +4,7 @@ import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
 
-function Garden(props) {
+function Garden() {
   const availableItems = ["backpack", "key", "lantern", "shovel", "rug"];
 
   /* useState = [stateObject, functionToUpdateStateObject] */
@@ -43,6 +43,16 @@ function Garden(props) {
     };
   };
 
+  const openDoor = () => {
+    const haveKey = inventoryItems.find((key) => {
+      if (key.name === "key") {
+        console.log("yay");
+      } else {
+        console.log("nooo") // still b0rken
+    //  alert("The door is locked. Perhaps something can open it");
+    }});
+  };
+
   return (
     <div className="garden">
       <ItemsPopupBox
@@ -57,7 +67,7 @@ function Garden(props) {
               return initialArray;
             },
             []
-          ); 
+          );
           setGardenItems(newGardenItems);
           setCurrentItem(undefined);
         }}
@@ -76,6 +86,7 @@ function Garden(props) {
         );
       })}
       <Inventory collectedItems={inventoryItems} />
+      <div className="door" onClick={openDoor} />
     </div>
   );
 }
