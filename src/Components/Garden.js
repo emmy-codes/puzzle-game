@@ -3,6 +3,7 @@ import "../App.css";
 import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
+import { Link } from "react-router-dom";
 
 function Garden() {
   const availableItems = ["backpack", "key", "lantern", "shovel", "rug"];
@@ -43,15 +44,13 @@ function Garden() {
     };
   };
 
-  const openDoor = () => {
-    // const haveKey = inventoryItems.find((key) => {
-    //   if (key.name !== "key") {
-    //     console.log("The door is locked. Perhaps something can open it");
-    //   } else {
-    //     console.log("yay");
-    // }});
-    console.log("test")
+  const goToKitchen = () => {
+    alert("The door is locked. Perhaps there is a key nearby.");
   };
+  
+  const haveKey = inventoryItems.find((key) => {
+    return key.name === "key";
+  });
 
   return (
     <div className="garden">
@@ -78,6 +77,7 @@ function Garden() {
       {gardenItems.map((gardenItem) => {
         return (
           <div
+            key={`garden-${gardenItem.name}`}
             className={gardenItem.name}
             onClick={clickHandlerCreator(gardenItem.name)}
           >
@@ -86,7 +86,11 @@ function Garden() {
         );
       })}
       <Inventory collectedItems={inventoryItems} />
-      <div className="door" onClick={openDoor} />
+      {!haveKey ? (
+        <div className="door-to-kitchen" onClick={goToKitchen} />
+      ) : (
+        <Link className="door-to-kitchen" to="/kitchen" />
+      )}
     </div>
   );
 }

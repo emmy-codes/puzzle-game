@@ -1,5 +1,4 @@
 import React from "react";
-import data from "../item-list.json";
 
 function setInventory(props) {
   return (
@@ -9,7 +8,7 @@ function setInventory(props) {
         <ul>
             {props.collectedItems.map((inventoryItem) => {
                 return (
-                  <li>
+                  <li key={inventoryItem.name}>
                     <div className={`inventory-image ${inventoryItem.name}`} />
                     {inventoryItem.name}
                   </li>

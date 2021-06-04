@@ -3,6 +3,7 @@ import "../App.css";
 import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
+import { Link } from "react-router-dom";
 
 function Kitchen() {
    const availableItems = [
@@ -54,8 +55,7 @@ function Kitchen() {
          object={currentItem}
          onPickUp={() => {
            setInventoryItems(inventoryItems.concat([currentItem]));
-           const newKitchenItems = kitchenItems
-    .reduce(
+           const newKitchenItems = kitchenItems.reduce(
              (initialArray, kitchenItem) => {
                if (kitchenItem.name !== currentItem.name) {
                  initialArray.push(kitchenItem);
@@ -71,8 +71,7 @@ function Kitchen() {
            setCurrentItem(undefined);
          }}
        />
-       {kitchenItems
-.map((kitchenItem) => {
+       {kitchenItems.map((kitchenItem) => {
          return (
            <div
              className={kitchenItem.name}
@@ -83,6 +82,8 @@ function Kitchen() {
          );
        })}
        <Inventory collectedItems={inventoryItems} />
+       <Link className="cellar-door" to="/cellar"> Steps to the cellar</Link>
+       <Link className="kitchen-door" to="/garden">To the garden</Link>
      </div>
    );
  }

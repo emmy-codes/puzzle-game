@@ -261,7 +261,7 @@ ul {
   z-index: 1;
 }
 
-.door {
+.door-to-kitchen {
   height: 200px;
   width: 210px;
   position: absolute;
@@ -269,4 +269,42 @@ ul {
   right: 23%;
   cursor: pointer;
   background-color: bisque;
+}
+
+.cellar-door-to-kitchen {
+  height: 70px;
+  width: 110px;
+  position: absolute;
+  bottom: 5%;
+  right: 35%;
+  cursor: pointer;
+  background-color: bisque;
+}
+
+.cellar-door,
+.cellar-door:visited {
+  height: 40px;
+  width: 120px;
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  cursor: pointer;
+  background-color: bisque;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.kitchen-door,
+.kitchen-door:visited {
+  height: 40px;
+  width: 120px;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  cursor: pointer;
+  background-color: bisque;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }

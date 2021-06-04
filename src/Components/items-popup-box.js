@@ -1,6 +1,5 @@
 import React from "react"
 import "../App.css"
-import itemList from "../item-list.json"
 
 function ItemsPopupBox(props) {
     

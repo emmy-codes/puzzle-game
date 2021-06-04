@@ -3,6 +3,7 @@ import "../App.css";
 import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
+import { Link } from "react-router-dom"
 
 function Cellar() {
   const availableItems = ["chalk", "patch-of-even-ground", "red-candles"];
@@ -76,6 +77,7 @@ function Cellar() {
         );
       })}
       <Inventory collectedItems={inventoryItems} />
+      <Link className="cellar-door-to-kitchen" to="/kitchen">Steps to the kitchen</Link>
     </div>
   );
 }
