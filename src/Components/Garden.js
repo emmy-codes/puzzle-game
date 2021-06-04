@@ -44,13 +44,13 @@ function Garden() {
   };
 
   const openDoor = () => {
-    const haveKey = inventoryItems.find((key) => {
-      if (key.name === "key") {
-        console.log("yay");
-      } else {
-        console.log("nooo") // still b0rken
-    //  alert("The door is locked. Perhaps something can open it");
-    }});
+    // const haveKey = inventoryItems.find((key) => {
+    //   if (key.name !== "key") {
+    //     console.log("The door is locked. Perhaps something can open it");
+    //   } else {
+    //     console.log("yay");
+    // }});
+    console.log("test")
   };
 
   return (

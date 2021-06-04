@@ -43,6 +43,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 20%;
+  cursor: pointer;
 }
 
 .garden > .key {
@@ -52,6 +53,7 @@ ul {
   position: absolute;
   top: 67%;
   right: 30%;
+  cursor: pointer;
 }
 
 .garden > .lantern {
@@ -61,6 +63,7 @@ ul {
   position: absolute;
   top: 20%;
   right: 29%;
+  cursor: pointer;
 }
 
 .garden > .shovel {
@@ -70,6 +73,7 @@ ul {
   position: absolute;
   top: 65%;
   left: 40%;
+  cursor: pointer;
 }
 
 .garden > .rug {
@@ -79,6 +83,7 @@ ul {
   position: absolute;
   bottom: 15%;
   left: 15%;
+  cursor: pointer;
 }
 
 .kitchen > .matches {
@@ -88,6 +93,7 @@ ul {
   position: absolute;
   bottom: 27%;
   left: 61%;
+  cursor: pointer;
 }
 
 .kitchen > .salt {
@@ -97,6 +103,7 @@ ul {
   position: absolute;
   top: 35%;
   left: 37%;
+  cursor: pointer;
 }
 
 .kitchen > .dried-herbs {
@@ -106,6 +113,7 @@ ul {
   position: absolute;
   top: 48%;
   right: 8%;
+  cursor: pointer;
 }
 
 .kitchen > .mortar-pestle {
@@ -115,6 +123,7 @@ ul {
   position: absolute;
   top: 54%;
   left: 49%;
+  cursor: pointer;
 }
 
 .cellar > .patch-of-even-ground {
@@ -124,6 +133,7 @@ ul {
   position: absolute;
   bottom: 20%;
   right: 34%;
+  cursor: pointer;
 }
 
 .cellar > .chalk {
@@ -133,6 +143,7 @@ ul {
   position: absolute;
   bottom: 50%;
   left: 51%;
+  cursor: pointer;
 }
 
 .cellar > .red-candles {
@@ -142,6 +153,7 @@ ul {
   position: absolute;
   top: 40%;
   left: 62%;
+  cursor: pointer;
 }
 
 .inventory {
@@ -250,10 +262,11 @@ ul {
 }
 
 .door {
-  height: 287px;
-  width: 222px;
+  height: 200px;
+  width: 210px;
   position: absolute;
-  top: 22vw;
-  right: 20.7vw;
+  top: 35%;
+  right: 23%;
   cursor: pointer;
+  background-color: bisque;
 }
