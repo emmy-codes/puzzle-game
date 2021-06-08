@@ -136,18 +136,18 @@ ul {
   cursor: pointer;
 }
 
-.cellar > .chalk {
+.cellar > .mound-of-dirt {
   background-color: pink;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  bottom: 50%;
-  left: 51%;
+  bottom: 42%;
+  left: 40%;
   cursor: pointer;
 }
 
-.cellar > .red-candles {
-  background-color: red;
+.cellar > .chalk {
+  background-color: white;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
@@ -271,7 +271,8 @@ ul {
   background-color: bisque;
 }
 
-.cellar-door-to-kitchen {
+.cellar-door-to-kitchen,
+.cellar-door-to-kitchen:visited {
   height: 70px;
   width: 110px;
   position: absolute;
@@ -279,6 +280,9 @@ ul {
   right: 35%;
   cursor: pointer;
   background-color: bisque;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .cellar-door,

@@ -1,5 +1,5 @@
-import React from "react"
-import "../App.css"
+import React from "react";
+import "../App.css";
 
 function ItemsPopupBox(props) {
     
@@ -16,4 +16,4 @@ function ItemsPopupBox(props) {
 }
 
 
-export default ItemsPopupBox
+export default ItemsPopupBox;

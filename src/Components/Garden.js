@@ -5,12 +5,10 @@ import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
 import { Link } from "react-router-dom";
 
-function Garden() {
+function Garden(props) {
   const availableItems = ["backpack", "key", "lantern", "shovel", "rug"];
 
   /* useState = [stateObject, functionToUpdateStateObject] */
-  const [currentItem, setCurrentItem] = React.useState();
-  const [inventoryItems, setInventoryItems] = React.useState([]);
   // const [gardenItems, setGardenItems] = React.useState(
   //   availableItems.reduce((array, item) => {
   //     const foundObject = data.items.find((dataItem) => {
@@ -21,6 +19,7 @@ function Garden() {
   //   }, [])
   // );
 
+  const [currentItem, setCurrentItem] = React.useState();
   const collectorArray = [];
 
   for (const showItem of availableItems) {
@@ -48,7 +47,7 @@ function Garden() {
     alert("The door is locked. Perhaps there is a key nearby.");
   };
   
-  const haveKey = inventoryItems.find((key) => {
+  const haveKey = props.inventoryItems.find((key) => {
     return key.name === "key";
   });
 
@@ -57,7 +56,7 @@ function Garden() {
       <ItemsPopupBox
         object={currentItem}
         onPickUp={() => {
-          setInventoryItems(inventoryItems.concat([currentItem]));
+          props.setInventoryItems(props.inventoryItems.concat([currentItem]));
           const newGardenItems = gardenItems.reduce(
             (initialArray, gardenItem) => {
               if (gardenItem.name !== currentItem.name) {
@@ -85,7 +84,7 @@ function Garden() {
           </div>
         );
       })}
-      <Inventory collectedItems={inventoryItems} />
+      <Inventory collectedItems={props.inventoryItems} />
       {!haveKey ? (
         <div className="door-to-kitchen" onClick={goToKitchen} />
       ) : (

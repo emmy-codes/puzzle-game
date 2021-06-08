@@ -5,7 +5,7 @@ import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
 import { Link } from "react-router-dom";
 
-function Kitchen() {
+function Kitchen(props) {
    const availableItems = [
      "matches",
      "salt",
@@ -13,19 +13,7 @@ function Kitchen() {
      "mortar-pestle"
    ];
 
-   /* useState = [stateObject, functionToUpdateStateObject] */
    const [currentItem, setCurrentItem] = React.useState();
-   const [inventoryItems, setInventoryItems] = React.useState([]);
-   // const [kitchenItems, setKitchenItems] = React.useState(
-   //   availableItems.reduce((array, item) => {
-   //     const foundObject = data.items.find((dataItem) => {
-   //       return dataItem.name === item
-   //     });
-   //     array.push(foundObject)
-   //     return array
-   //   }, [])
-   // );
-
    const collectorArray = [];
 
    for (const showItem of availableItems) {
@@ -54,7 +42,7 @@ function Kitchen() {
        <ItemsPopupBox
          object={currentItem}
          onPickUp={() => {
-           setInventoryItems(inventoryItems.concat([currentItem]));
+           props.setInventoryItems(props.inventoryItems.concat([currentItem]));
            const newKitchenItems = kitchenItems.reduce(
              (initialArray, kitchenItem) => {
                if (kitchenItem.name !== currentItem.name) {
@@ -81,7 +69,7 @@ function Kitchen() {
            </div>
          );
        })}
-       <Inventory collectedItems={inventoryItems} />
+       <Inventory collectedItems={props.inventoryItems} />
        <Link className="cellar-door" to="/cellar"> Steps to the cellar</Link>
        <Link className="kitchen-door" to="/garden">To the garden</Link>
      </div>
