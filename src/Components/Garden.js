@@ -60,19 +60,32 @@ function Garden(props) {
   return (
     <div className="garden">
       {currentItem && currentItem["pick-up"] ? (
-      <ItemsPopupBox
-        object={currentItem}
-        onPickUp={() => {
-          props.setInventoryItems(props.inventoryItems.concat([currentItem]));
-         removeItem();
-        }}
-        onClose={() => {
-          setCurrentItem(undefined);
-        }}
-      />
-      ) :  (
+        <ItemsPopupBox
+          object={currentItem}
+          onPickUp={() => {
+            props.setInventoryItems(props.inventoryItems.concat([currentItem]));
+            props.setInventoryItems(props.inventoryItems.concat([currentItem]));
+            const newGardenItems = gardenItems.reduce(
+              (initialArray, gardenItem) => {
+                if (gardenItem.name !== currentItem.name) {
+                  initialArray.push(gardenItem);
+                }
+                return initialArray;
+              },
+              []
+            );
+            setGardenItems(newGardenItems);
+            setCurrentItem(undefined);
+          }}
+          onClose={() => {
+            setCurrentItem(undefined);
+          }}
+        />
+      ) : (
         <UsingItems
           object={currentItem}
+          inventoryItems={props.inventoryItems}
+          setInventoryItems={props.setInventoryItems}
           onUse={() => {
             alert(currentItem.use);
             removeItem();
@@ -81,8 +94,8 @@ function Garden(props) {
             setCurrentItem(undefined);
           }}
         />
-      )};
-
+      )}
+      ;
       {gardenItems.map((gardenItem) => {
         return (
           <div
@@ -90,7 +103,7 @@ function Garden(props) {
             className={gardenItem.name}
             onClick={clickHandlerCreator(gardenItem.name)}
           >
-            {gardenItem.name}
+            {gardenItem.name.replace("-", " ")}
           </div>
         );
       })}
@@ -100,7 +113,8 @@ function Garden(props) {
         <div className="door-to-kitchen" onClick={goToKitchen} />
       ) : (
         <Link className="door-to-kitchen" to="/kitchen" />
-      )};
+      )}
+      ;
     </div>
   );
 };

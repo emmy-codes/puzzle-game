@@ -13,8 +13,9 @@
         {
             "name": "mound-of-dirt",
             "description": "There is a disturbed patch of ground here. It looks as if something was hastily buried.",
-            "on-use": {"effect": "add-to-inventory", "item": "red-candles"},
-            "use": "You start to dig into the dirt, and soon unearth two red candles."
+            "requires": "shovel",
+            "use": "You start to dig into the dirt, and soon unearth two red candles.",
+            "use-result": "red-candles"
         },
         {
             "name": "backpack",

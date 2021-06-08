@@ -10,7 +10,6 @@ function Cellar(props) {
   const availableItems = ["mound-of-dirt", "patch-of-even-ground", "chalk"];
   const [currentItem, setCurrentItem] = React.useState();
   const collectorArray = [];
-  const [useThatItem, setUseThatItem] = React.useState();
 
   for (const showItem of availableItems) {
     const foundObject = data.items.find((item) => {
@@ -51,7 +50,17 @@ function Cellar(props) {
           object={currentItem}
           onPickUp={() => {
             props.setInventoryItems(props.inventoryItems.concat([currentItem]));
-            removeItem();
+            const newCellarItems = cellarItems.reduce(
+              (initialArray, cellarItem) => {
+                if (cellarItem.name !== currentItem.name) {
+                  initialArray.push(cellarItem);
+                }
+                return initialArray;
+              },
+              []
+            );
+            setCellarItems(newCellarItems);
+            setCurrentItem(undefined);
           }}
           onClose={() => {
             setCurrentItem(undefined);
@@ -60,6 +69,8 @@ function Cellar(props) {
       ) : (
         <UsingItems
           object={currentItem}
+          inventoryItems={props.inventoryItems}
+          setInventoryItems={props.setInventoryItems}
           onUse={() => {
             alert(currentItem.use);
             removeItem();
@@ -68,15 +79,15 @@ function Cellar(props) {
             setCurrentItem(undefined);
           }}
         />
-      )};
-
+      )}
+      ;
       {cellarItems.map((cellarItem) => {
         return (
           <div
             className={cellarItem.name}
             onClick={clickHandlerCreator(cellarItem.name)}
           >
-            {cellarItem.name}
+            {cellarItem.name.replace("-", " ")}
           </div>
         );
       })}
