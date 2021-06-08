@@ -160,6 +160,8 @@ ul {
   border: dashed;
   text-align: center;
   position: absolute;
+  overflow-y: auto;
+  max-height: 30vh;
   right: 20px;
   top: 20px;
   padding: 10px;

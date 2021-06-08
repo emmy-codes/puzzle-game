@@ -8,18 +8,6 @@ import UsingItems from "./Use-Items";
 
 function Cellar(props) {
   const availableItems = ["mound-of-dirt", "patch-of-even-ground", "chalk"];
-
-  /* useState = [stateObject, functionToUpdateStateObject] */
-  // const [cellarItems, setCellarItems] = React.useState(
-  //   availableItems.reduce((array, item) => {
-  //     const foundObject = data.items.find((dataItem) => {
-  //       return dataItem.name === item
-  //     });
-  //     array.push(foundObject)
-  //     return array
-  //   }, [])
-  // );
-
   const [currentItem, setCurrentItem] = React.useState();
   const collectorArray = [];
   const [useThatItem, setUseThatItem] = React.useState();
@@ -29,7 +17,7 @@ function Cellar(props) {
       return item.name === showItem;
     });
     collectorArray.push(foundObject);
-  }
+  };
   const [cellarItems, setCellarItems] = React.useState(collectorArray);
 
   /* clickHandlerCreator is a function that takes targetItem and stores for 
@@ -54,7 +42,7 @@ function Cellar(props) {
     }, []);
     setCellarItems(newCellarItems);
     setCurrentItem(undefined);
-  }
+  };
 
   return (
     <div className="cellar">
@@ -73,14 +61,14 @@ function Cellar(props) {
         <UsingItems
           object={currentItem}
           onUse={() => {
-            alert(currentItem.use)
+            alert(currentItem.use);
             removeItem();
           }}
           onClose={() => {
             setCurrentItem(undefined);
           }}
         />
-      )}
+      )};
 
       {cellarItems.map((cellarItem) => {
         return (
@@ -98,6 +86,6 @@ function Cellar(props) {
       </Link>
     </div>
   );
-}
+};
 
 export default Cellar;
