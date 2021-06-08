@@ -37,37 +37,37 @@ ul {
 }
 
 .garden > .backpack {
-  background-color: red;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 50%;
-  left: 20%;
+  top: 44%;
+  left: 9%;
   cursor: pointer;
 }
 
 .garden > .key {
-  background-color: forestgreen;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 67%;
-  right: 30%;
+  bottom: 29%;
+  right: 19%;
   cursor: pointer;
 }
 
 .garden > .lantern {
-  background-color: rgb(146, 45, 20);
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 20%;
+  top: 19%;
   right: 29%;
   cursor: pointer;
 }
 
 .garden > .shovel {
-  background-color: lightskyblue;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
@@ -77,57 +77,57 @@ ul {
 }
 
 .garden > .rug {
-  background-color: pink;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  bottom: 15%;
+  bottom: 20%;
   left: 15%;
   cursor: pointer;
 }
 
 .kitchen > .matches {
-  background-color: pink;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  bottom: 27%;
-  left: 61%;
+  bottom: 15%;
+  right: 28%;
   cursor: pointer;
 }
 
 .kitchen > .salt {
-  background-color: rgb(146, 45, 20);
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 35%;
-  left: 37%;
+     top: 38%;
+    left: 32%;
   cursor: pointer;
 }
 
 .kitchen > .dried-herbs {
-  background-color: forestgreen;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 48%;
-  right: 8%;
+  top: 49%;
+  right: 9%;
   cursor: pointer;
 }
 
 .kitchen > .mortar-pestle {
-  background-color: lightskyblue;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
   top: 54%;
-  left: 49%;
+  left: 50%;
   cursor: pointer;
 }
 
 .cellar > .patch-of-even-ground {
-  background-color: forestgreen;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
@@ -137,7 +137,7 @@ ul {
 }
 
 .cellar > .mound-of-dirt {
-  background-color: pink;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
@@ -147,12 +147,12 @@ ul {
 }
 
 .cellar > .chalk {
-  background-color: white;
+  font-size: small;
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 40%;
-  left: 62%;
+  top: 41%;
+  left: 74%;
   cursor: pointer;
 }
 
@@ -264,13 +264,12 @@ ul {
 }
 
 .door-to-kitchen {
-  height: 200px;
-  width: 210px;
+  height: 32%;
+  width: 18%;
   position: absolute;
-  top: 35%;
-  right: 23%;
+  top: 32%;
+  right: 22%;
   cursor: pointer;
-  background-color: bisque;
 }
 
 .cellar-door-to-kitchen,

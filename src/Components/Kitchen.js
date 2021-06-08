@@ -69,6 +69,8 @@ function Kitchen(props) {
       ) : (
         <UsingItems
           object={currentItem}
+          inventoryItems={props.inventoryItems}
+          setInventoryItems={props.setInventoryItems}
           onUse={() => {
             alert(currentItem.use);
             removeItem();
@@ -85,7 +87,7 @@ function Kitchen(props) {
             className={kitchenItem.name}
             onClick={clickHandlerCreator(kitchenItem.name)}
           >
-            {kitchenItem.name}
+            {kitchenItem.name.replace("-", " ")}
           </div>
         );
       })}

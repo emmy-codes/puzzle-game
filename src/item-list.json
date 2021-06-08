@@ -13,6 +13,7 @@
         {
             "name": "mound-of-dirt",
             "description": "There is a disturbed patch of ground here. It looks as if something was hastily buried.",
+            "on-use": {"effect": "add-to-inventory", "item": "red-candles"},
             "use": "You start to dig into the dirt, and soon unearth two red candles."
         },
         {
@@ -24,6 +25,7 @@
             "name": "lantern",
             "description": "Here is a lantern",
             "pick-up": "You pick up the lantern and place it in your backpack.",
+            "needs-lighting": true,
             "use": "You strike a match against the box and a flame bursts into life. You then insert the flame into the lantern, causing it to bring forth a warm, golden glow. The room around you becomes more visible."
         },
         {
@@ -45,10 +47,12 @@
         {
             "name": "mortar-pestle",
             "description": "There is a mortar & pestle stood on the kitchen counter.",
-            "use": "You place the herbs into the mortar & pestle and grind the herbs into a fine dust."
+            "requires": "dried-herbs",
+            "use": "You place the herbs into the mortar & pestle and grind the herbs into a fine dust.",
+            "use-result": "ground-herbs"
         },
         {
-            "name": "ground herbs",
+            "name": "ground-herbs",
             "description": "The mortar and pestle contains the ground bundle of herbs.",
             "pick-up": "You pour the powder into a piece of kitchen roll and place it in your backpack.",
             "use": "You sprinkle the herbal powder onto the red candle flames. A bright green light flashes through the room, then they return to normal."
@@ -63,6 +67,7 @@
             "name": "red-candles",
             "description": "Here are two red candles",
             "pick-up": "You dust the candles off and place them in your backpack.",
+            "needs-lighting": true,
             "use": "You strike a match against the box and a flame bursts into life. You then light the candles one by one, watching the eerie red smoke trail up the stairs.",
             "place": "You place the candles one each side of the bottom of the stairs."
         },
