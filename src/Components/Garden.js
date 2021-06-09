@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ function Garden(props) {
 
   for (const showItem of availableItems) {
     // for-of loop: named var(showItem), and name of var of array above(availableItems)
-    const foundObject = data.items.find((item) => {
+    const foundObject = props.data.items.find((item) => {
       /* checking data which is the name we gave to the json list on line 3,
        items is the name of the array in there, and .find is a thing that looks for whats in the paramater which we named "item"*/
       return (
@@ -28,10 +27,10 @@ function Garden(props) {
   /* clickHandlerCreator is a function that takes targetItem and stores for 
   the click handler (the return) to use */
   const clickHandlerCreator = (targetItem) => {
-    /* takes targetItem and .find allows it to check the array data.items
+    /* takes targetItem and .find allows it to check the array props.data.items
     for the corresponding property value */
     return () => {
-      const nextItem = data.items.find((item) => {
+      const nextItem = props.data.items.find((item) => {
         return item.name === targetItem;
       });
       setCurrentItem(nextItem);
@@ -103,7 +102,7 @@ function Garden(props) {
             className={gardenItem.name}
             onClick={clickHandlerCreator(gardenItem.name)}
           >
-            {gardenItem.name.replace("-", " ")}
+            {gardenItem.name.replace("-", "")}
           </div>
         );
       })}

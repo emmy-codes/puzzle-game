@@ -1,9 +1,8 @@
 import React from "react";
 import "../App.css";
-import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import UsingItems from "./Use-Items";
 
 function Cellar(props) {
@@ -12,7 +11,7 @@ function Cellar(props) {
   const collectorArray = [];
 
   for (const showItem of availableItems) {
-    const foundObject = data.items.find((item) => {
+    const foundObject = props.data.items.find((item) => {
       return item.name === showItem;
     });
     collectorArray.push(foundObject);
@@ -22,10 +21,10 @@ function Cellar(props) {
   /* clickHandlerCreator is a function that takes targetItem and stores for 
   the click handler (the return) to use */
   const clickHandlerCreator = (targetItem) => {
-    /* takes targetItem and .find allows it to check the array data.items
+    /* takes targetItem and .find allows it to check the array props.data.items
     for the corresponding property value */
     return () => {
-      const nextItem = data.items.find((item) => {
+      const nextItem = props.data.items.find((item) => {
         return item.name === targetItem;
       });
       setCurrentItem(nextItem);
@@ -80,7 +79,6 @@ function Cellar(props) {
           }}
         />
       )}
-      ;
       {cellarItems.map((cellarItem) => {
         return (
           <div

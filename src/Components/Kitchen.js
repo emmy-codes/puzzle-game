@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import data from "../item-list.json";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
 import { Link } from "react-router-dom";
@@ -12,7 +11,7 @@ function Kitchen(props) {
   const collectorArray = [];
 
   for (const showItem of availableItems) {
-    const foundObject = data.items.find((item) => {
+    const foundObject = props.data.items.find((item) => {
       return item.name === showItem;
     });
     collectorArray.push(foundObject);
@@ -25,7 +24,7 @@ function Kitchen(props) {
     /* takes targetItem and .find allows it to check the array data.items
     for the corresponding property value */
     return () => {
-      const nextItem = data.items.find((item) => {
+      const nextItem = props.data.items.find((item) => {
         return item.name === targetItem;
       });
       setCurrentItem(nextItem);

@@ -3,6 +3,7 @@ import React from "react"
 import Garden from "./Components/Garden";
 import Kitchen from "./Components/Kitchen";
 import Cellar from "./Components/Cellar";
+import data from "./item-list.json";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -16,20 +17,24 @@ function App() {
             <Garden
               inventoryItems={inventoryItems}
               setInventoryItems={setInventoryItems}
+              data={data}
             />
           </Route>
           <Route exact path="/kitchen">
             <Kitchen
               inventoryItems={inventoryItems}
               setInventoryItems={setInventoryItems}
+              data={data}
             />
           </Route>
           <Route exact path="/cellar">
             <Cellar
               inventoryItems={inventoryItems}
               setInventoryItems={setInventoryItems}
+              data={data}
             />
           </Route>
+          
         </Switch>
       </Router>
     </>

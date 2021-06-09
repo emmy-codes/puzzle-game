@@ -1,9 +1,10 @@
 import React from "react";
 import "../App.css";
 import data from "../item-list.json";
-
+import { useHistory } from "react-router-dom";
 
 function UsingItems(props) {
+  const history = useHistory();
   if (props.object && !props.object["requires"]) {
     return (
       <>
@@ -16,19 +17,20 @@ function UsingItems(props) {
       </>
     );
   } else if (props.object) {
-    const requiredItem = props.inventoryItems.find((item) => {
-      return item.name === props.object["requires"];
+    console.log(props.inventoryItems);
+    console.log(props.object["requires"]);
+    const requiredItem = props.inventoryItems.filter((item) => {
+      return props.object["requires"].includes(item.name);
     });
 
-    if(!requiredItem) {
-      alert("You are missing something");
-      props.onClose()
+    if (requiredItem.length !== props.object["requires"].length) {
+      alert("A quick look into your backpack tells you that you're lacking an important item in order to progress.");
+      props.onClose();
     } else {
-
       const useWithEffect = () => {
         const newInventoryItems = props.inventoryItems.reduce(
           (initialArray, inventoryStuff) => {
-            if (inventoryStuff.name !== props.object["requires"]) {
+            if (inventoryStuff.name !== props.object.name) {
               initialArray.push(inventoryStuff);
             }
             return initialArray;
@@ -39,12 +41,18 @@ function UsingItems(props) {
           return item.name === props.object["use-result"];
         });
 
-
-        newInventoryItems.push(usedItem);
+        if (usedItem) {
+          newInventoryItems.push(usedItem);
+        } else if (
+          props.object["use-result"] &&
+          props.object["use-result"] === "Navigate to epilogue"
+        ) { 
+          history.push('/epilogue')
+        }
 
         props.setInventoryItems(newInventoryItems);
         props.onUse();
-      }
+      };
 
       return (
         <>
