@@ -1,7 +1,7 @@
 {
   "name": "puzzle-game",
   "version": "0.1.0",
-  "homepage": "https://emmy-codes.github.io/garden",
+  "homepage": "https://emmy-codes.github.io/puzzle-game/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
