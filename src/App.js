@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/puzzle-game">
         <Switch>
           <Route exact path="/">
             <Garden
