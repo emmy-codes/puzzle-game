@@ -13,6 +13,13 @@ function App() {
     <>
       <Router>
         <Switch>
+          <Route exact path="/">
+            <Garden
+              inventoryItems={inventoryItems}
+              setInventoryItems={setInventoryItems}
+              data={data}
+            />
+          </Route>
           <Route exact path="/garden">
             <Garden
               inventoryItems={inventoryItems}
@@ -34,7 +41,6 @@ function App() {
               data={data}
             />
           </Route>
-          
         </Switch>
       </Router>
     </>
