@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/puzzle-game/static/css/main.52f0d26a.chunk.css",
-    "main.js": "/puzzle-game/static/js/main.0a510080.chunk.js",
-    "main.js.map": "/puzzle-game/static/js/main.0a510080.chunk.js.map",
+    "main.css": "/puzzle-game/static/css/main.ceeb0242.chunk.css",
+    "main.js": "/puzzle-game/static/js/main.8ac662a9.chunk.js",
+    "main.js.map": "/puzzle-game/static/js/main.8ac662a9.chunk.js.map",
     "runtime-main.js": "/puzzle-game/static/js/runtime-main.ded246c6.js",
     "runtime-main.js.map": "/puzzle-game/static/js/runtime-main.ded246c6.js.map",
-    "static/js/2.c34bae25.chunk.js": "/puzzle-game/static/js/2.c34bae25.chunk.js",
-    "static/js/2.c34bae25.chunk.js.map": "/puzzle-game/static/js/2.c34bae25.chunk.js.map",
+    "static/js/2.94ec9cd0.chunk.js": "/puzzle-game/static/js/2.94ec9cd0.chunk.js",
+    "static/js/2.94ec9cd0.chunk.js.map": "/puzzle-game/static/js/2.94ec9cd0.chunk.js.map",
     "index.html": "/puzzle-game/index.html",
-    "static/css/main.52f0d26a.chunk.css.map": "/puzzle-game/static/css/main.52f0d26a.chunk.css.map",
-    "static/js/2.c34bae25.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.c34bae25.chunk.js.LICENSE.txt",
+    "static/css/main.ceeb0242.chunk.css.map": "/puzzle-game/static/css/main.ceeb0242.chunk.css.map",
+    "static/js/2.94ec9cd0.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.94ec9cd0.chunk.js.LICENSE.txt",
     "static/media/App.css": "/puzzle-game/static/media/shovel.f8134365.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ded246c6.js",
-    "static/js/2.c34bae25.chunk.js",
-    "static/css/main.52f0d26a.chunk.css",
-    "static/js/main.0a510080.chunk.js"
+    "static/js/2.94ec9cd0.chunk.js",
+    "static/css/main.ceeb0242.chunk.css",
+    "static/js/main.8ac662a9.chunk.js"
   ]
 }
