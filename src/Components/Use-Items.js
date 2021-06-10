@@ -17,8 +17,6 @@ function UsingItems(props) {
       </>
     );
   } else if (props.object) {
-    console.log(props.inventoryItems);
-    console.log(props.object["requires"]);
     const requiredItem = props.inventoryItems.filter((item) => {
       return props.object["requires"].includes(item.name);
     });
