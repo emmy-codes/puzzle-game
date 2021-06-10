@@ -46,7 +46,7 @@ ul {
   max-height: 20vh;
   position: absolute;
   top: 44%;
-  left: 9%;
+  left: 6%;
   cursor: pointer;
 }
 
@@ -55,8 +55,8 @@ ul {
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  bottom: 29%;
-  right: 19%;
+  bottom: 33%;
+  right: 20%;
   cursor: pointer;
 }
 
@@ -75,8 +75,8 @@ ul {
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 65%;
-  left: 40%;
+  top: 64%;
+  left: 39%;
   cursor: pointer;
 }
 
@@ -85,8 +85,8 @@ ul {
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  bottom: 20%;
-  left: 15%;
+  bottom: 22%;
+  left: 14%;
   cursor: pointer;
 }
 
@@ -95,8 +95,8 @@ ul {
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  bottom: 15%;
-  right: 28%;
+  bottom: 17%;
+  right: 29%;
   cursor: pointer;
 }
 
@@ -105,8 +105,8 @@ ul {
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-     top: 38%;
-    left: 32%;
+  top: 24%;
+  left: 33%;
   cursor: pointer;
 }
 
@@ -116,7 +116,7 @@ ul {
   max-height: 20vh;
   position: absolute;
   top: 49%;
-  right: 9%;
+  right: 11%;
   cursor: pointer;
 }
 
@@ -125,8 +125,8 @@ ul {
   max-width: 20vw;
   max-height: 20vh;
   position: absolute;
-  top: 54%;
-  left: 50%;
+  top: 53%;
+  left: 49%;
   cursor: pointer;
 }
 
@@ -140,7 +140,7 @@ ul {
   max-height: 20vh;
   position: absolute;
   bottom: 20%;
-  right: 34%;
+  right: 43%;
   cursor: pointer;
 }
 
