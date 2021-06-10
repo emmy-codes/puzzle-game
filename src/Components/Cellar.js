@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import ItemsPopupBox from "./items-popup-box";
 import Inventory from "./Inventory";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UsingItems from "./Use-Items";
 
 function Cellar(props) {
